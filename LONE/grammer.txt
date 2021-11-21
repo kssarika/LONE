@@ -1,0 +1,9 @@
+expr    :   ((PLUS|MINUS) term)
+
+term    :   ((MUL|DIV) factor)
+
+factor  :   (PLUS|MINUS)factor | power
+
+power   :   module((POW)factor)
+
+module  :   (INT|FLOAT) | LPAREN expr RPAREN
